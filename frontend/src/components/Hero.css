@@ -1,0 +1,375 @@
+/* ═══════════════════════════════════════════════════
+   HERO  —  3 columnas exactas como el diseño
+═══════════════════════════════════════════════════ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 200px 1fr 340px;
+  min-height: 500px;
+  background: linear-gradient(160deg, #EDD9C8 0%, #F0E0D0 50%, #EDD9C8 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─────────────────────────────────────
+   COLUMNA IZQUIERDA
+───────────────────────────────────── */
+.hero-left {
+  position: relative;
+  background: linear-gradient(180deg, #CBAA88 0%, #B8956E 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.hero-arch-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Arco */
+.arch {
+  position: relative;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Forma del arco (fondo claro) */
+.arch::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(180deg, #EDD9C8 0%, #E0C9B0 100%);
+  border-radius: 65px 65px 0 0;
+  box-shadow:
+    inset 0 0 30px rgba(0,0,0,0.06),
+    0 0 50px rgba(201,169,110,0.4),
+    0 0 80px rgba(201,169,110,0.2);
+}
+
+/* Borde luminoso del arco */
+.arch-glow {
+  position: absolute;
+  top: -3px; left: -3px; right: -3px;
+  height: 226px;
+  border-radius: 68px 68px 0 0;
+  background: transparent;
+  border: 2px solid rgba(201,169,110,0.5);
+  box-shadow: 0 0 20px rgba(201,169,110,0.6), inset 0 0 20px rgba(201,169,110,0.1);
+  z-index: 1;
+}
+
+.arch-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
+.arch-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #7A5C4E;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.arch-tagline {
+  font-size: 9px;
+  color: #A8897A;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.arch-heart {
+  display: block;
+  color: #C8705A;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* Pedestal */
+.arch-pedestal {
+  position: relative;
+  z-index: 3;
+  width: 110px;
+  height: 30px;
+  background: linear-gradient(180deg, #E8D5BE 0%, #D4C0A8 100%);
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.12);
+}
+
+/* Pampas */
+.pampas {
+  position: absolute;
+  bottom: 0;
+  width: 55px;
+  z-index: 1;
+  opacity: 0.9;
+}
+.pampas-l { left: 4px; }
+.pampas-r { right: 4px; }
+
+/* ─────────────────────────────────────
+   COLUMNA CENTRAL
+───────────────────────────────────── */
+.hero-center {
+  padding: 44px 28px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-badge {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #A8897A;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  color: #C8705A;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #5A4A42;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.hero-heart-icon {
+  font-size: 20px;
+  color: #C8705A;
+  margin-bottom: 18px;
+}
+
+.hero-welcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: #3D2B1F;
+}
+
+.hero-welcome strong {
+  font-weight: 600;
+}
+
+.hero-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #7A5C4E;
+  margin-bottom: 10px;
+  max-width: 400px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fila de info del evento */
+.hero-event-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 22px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.event-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 10px;
+  padding: 8px 12px;
+  border: 1px solid rgba(201,169,110,0.25);
+}
+
+.event-pill-icon {
+  font-size: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.event-pill-main {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3D2B1F;
+  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.event-pill-sub {
+  font-size: 11px;
+  color: #A8897A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-cupos {
+  font-size: 13px;
+  color: #C8705A;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ─────────────────────────────────────
+   COLUMNA DERECHA
+───────────────────────────────────── */
+.hero-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+/* Rama dorada */
+.branch-deco {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 80px;
+  height: 160px;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+/* Contenedor bailarina */
+.dancer-container {
+  position: relative;
+  width: 220px;
+  height: 340px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Aura rosada de fondo */
+.dancer-aura {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(
+    circle,
+    rgba(212,144,122,0.28) 0%,
+    rgba(212,144,122,0.10) 50%,
+    transparent 75%
+  );
+  border-radius: 50%;
+}
+
+/* SVG de la bailarina */
+.dancer-svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 330px;
+  filter: drop-shadow(0 6px 24px rgba(200,112,90,0.22));
+}
+
+/* Nota de pago */
+.hero-payment-note {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 24px 26px;
+  margin: 10px 14px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  border: 1px solid rgba(201,169,110,0.22);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+  z-index: 3;
+  width: calc(100% - 28px);
+}
+
+.note-i-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #D4907A;
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(212,144,122,0.4);
+}
+
+.hero-payment-note p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5A4A42;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 160px 1fr 200px;
+    min-height: auto;
+  }
+  .hero-title { font-size: 44px; }
+  .arch::before { height: 180px; border-radius: 55px 55px 0 0; }
+  .arch { width: 110px; }
+  .dancer-container { width: 170px; height: 270px; }
+  .dancer-svg { width: 150px; height: 260px; }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px auto auto;
+  }
+  .hero-left {
+    height: 220px;
+  }
+  .hero-center { padding: 30px 20px; }
+  .hero-title { font-size: 40px; }
+  .hero-right {
+    padding: 20px;
+    min-height: 300px;
+  }
+  .dancer-container { width: 160px; height: 260px; }
+  .dancer-svg { width: 140px; height: 240px; }
+  .hero-event-row { gap: 10px; }
+}

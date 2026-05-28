@@ -1,0 +1,80 @@
+### DALE FLOW - API Testing
+### Usar con REST Client (VS Code) o Postman
+
+### 1. Health Check
+GET http://localhost:8000/api/health
+
+###
+
+### 2. Crear Inscripción - Ejemplo Completo
+POST http://localhost:8000/api/inscripciones
+Content-Type: application/json
+
+{
+  "nombre": "María García López",
+  "edad": 28,
+  "fecha_nacimiento": "1998-05-15",
+  "whatsapp": "+57 300 123 4567",
+  "correo": "maria.garcia@ejemplo.com",
+  "como_se_entero": "Instagram",
+  "motivacion": "Quiero reconectarme conmigo misma y encontrar un espacio para mí",
+  "necesidad": "Desconectar de estrés",
+  "condicion_salud": "Ninguna",
+  "autoriza_fotos": true,
+  "recibir_info": true
+}
+
+###
+
+### 3. Crear Inscripción - Campos Mínimos
+POST http://localhost:8000/api/inscripciones
+Content-Type: application/json
+
+{
+  "nombre": "Ana Martínez",
+  "edad": 32,
+  "whatsapp": "+57 310 987 6543",
+  "correo": "ana@ejemplo.com",
+  "como_se_entero": "Recomendación",
+  "necesidad": "Volver a conectar conmigo",
+  "autoriza_fotos": false,
+  "recibir_info": true
+}
+
+###
+
+### 4. Crear Inscripción - Error de Validación (falta email)
+POST http://localhost:8000/api/inscripciones
+Content-Type: application/json
+
+{
+  "nombre": "Test Usuario",
+  "edad": 25,
+  "whatsapp": "+57 300 111 2222",
+  "como_se_entero": "WhatsApp",
+  "necesidad": "Divertirme",
+  "autoriza_fotos": true,
+  "recibir_info": false
+}
+
+###
+
+### 5. Crear Inscripción - Todas las opciones
+POST http://localhost:8000/api/inscripciones
+Content-Type: application/json
+
+{
+  "nombre": "Laura Rodríguez",
+  "edad": 35,
+  "fecha_nacimiento": "1991-08-20",
+  "whatsapp": "+57 320 555 8888",
+  "correo": "laura.rodriguez@ejemplo.com",
+  "como_se_entero": "Canal local",
+  "motivacion": "Necesito un espacio para mí, para desconectar del trabajo y la rutina diaria",
+  "necesidad": "Regalarme tiempo para mí",
+  "condicion_salud": "Tengo una lesión leve en la rodilla derecha",
+  "autoriza_fotos": true,
+  "recibir_info": true
+}
+
+###

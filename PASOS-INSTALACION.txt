@@ -1,0 +1,102 @@
+═══════════════════════════════════════════════════════════════════
+                DALE FLOW - PASOS DE INSTALACIÓN
+═══════════════════════════════════════════════════════════════════
+
+PASO 1: VERIFICAR REQUISITOS
+═══════════════════════════════════════════════════════════════════
+
+Ejecuta (doble clic):
+  verificar-requisitos.bat
+
+Esto te dirá qué necesitas instalar.
+
+═══════════════════════════════════════════════════════════════════
+
+PASO 2: INSTALAR LO QUE FALTE
+═══════════════════════════════════════════════════════════════════
+
+Si falta PHP:
+  → https://windows.php.net/download/
+  → Descargar "Thread Safe" (ZIP)
+  → Extraer en C:\php
+  → Agregar C:\php al PATH
+
+Si falta Composer:
+  → https://getcomposer.org/download/
+  → Descargar y ejecutar el instalador
+
+Si falta Node.js:
+  → https://nodejs.org/
+  → Descargar versión LTS
+  → Ejecutar el instalador
+
+IMPORTANTE: Después de instalar, REINICIA la terminal/CMD
+
+═══════════════════════════════════════════════════════════════════
+
+PASO 3: INSTALAR DEPENDENCIAS DEL PROYECTO
+═══════════════════════════════════════════════════════════════════
+
+Ejecuta (doble clic):
+  install.bat
+
+Esto instalará todas las dependencias de Laravel y React.
+
+═══════════════════════════════════════════════════════════════════
+
+PASO 4: CONFIGURAR BASE DE DATOS
+═══════════════════════════════════════════════════════════════════
+
+1. Abrir: backend\.env con Notepad
+
+2. Configurar PostgreSQL:
+   DB_CONNECTION=pgsql
+   DB_HOST=127.0.0.1
+   DB_PORT=5432
+   DB_DATABASE=daleflow
+   DB_USERNAME=postgres
+   DB_PASSWORD=TU_PASSWORD
+
+3. Crear base de datos en PostgreSQL:
+   CREATE DATABASE daleflow;
+
+4. Abrir CMD y ejecutar:
+   cd C:\Users\Pc\Desktop\DaleFlow\backend
+   php artisan migrate
+
+═══════════════════════════════════════════════════════════════════
+
+PASO 5: CONFIGURAR WOMPI
+═══════════════════════════════════════════════════════════════════
+
+1. Abrir: backend\.env
+
+2. Agregar tu link de Wompi:
+   WOMPI_PAYMENT_LINK=https://checkout.wompi.co/l/TU_LINK
+
+═══════════════════════════════════════════════════════════════════
+
+PASO 6: INICIAR EL PROYECTO
+═══════════════════════════════════════════════════════════════════
+
+Ejecuta (doble clic):
+  start.bat
+
+Esto abrirá 2 ventanas:
+  - Backend: http://localhost:8000
+  - Frontend: http://localhost:5173
+
+Abre tu navegador en: http://localhost:5173
+
+═══════════════════════════════════════════════════════════════════
+
+¿PROBLEMAS?
+═══════════════════════════════════════════════════════════════════
+
+Lee: SOLUCION-RAPIDA.md
+
+═══════════════════════════════════════════════════════════════════
+
+¡LISTO! 🎉
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,287 @@
+.inscription-form {
+  background: var(--color-beige);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-title {
+  font-size: 48px;
+  color: var(--color-terracota);
+  margin-bottom: 10px;
+  letter-spacing: 4px;
+}
+
+.form-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-message {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-message.success {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #81C784;
+}
+
+.form-message.error {
+  background: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #E57373;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: var(--color-text-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.section-icon {
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Labels de campo (solo los de texto, no los de radio/checkbox) */
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+
+/* Eliminar el label global que rompía radio y checkbox */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--color-beige-dark);
+  border-radius: 12px;
+  font-size: 15px;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-terracota);
+  box-shadow: 0 0 0 3px rgba(212, 165, 154, 0.1);
+}
+
+input.error,
+textarea.error {
+  border-color: var(--color-error);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--font-body);
+}
+
+.error-text {
+  display: block;
+  color: var(--color-error);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 2px solid var(--color-beige-dark);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.radio-label:hover {
+  border-color: var(--color-terracota);
+  background: var(--color-beige);
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-terracota);
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color-terracota);
+  border-radius: 50%;
+}
+
+.radio-label input[type="radio"]:checked ~ span:not(.radio-custom) {
+  font-weight: 600;
+  color: var(--color-terracota);
+}
+
+/* Checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-terracota);
+  border-radius: 6px;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background: var(--color-terracota);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Botón de envío */
+.form-actions {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.submit-button {
+  background: var(--color-terracota);
+  color: var(--color-white);
+  padding: 18px 50px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 165, 154, 0.3);
+  width: 100%;
+  max-width: 500px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--color-terracota-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 154, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .form-title {
+    font-size: 36px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .submit-button {
+    padding: 16px 30px;
+    font-size: 15px;
+  }
+}

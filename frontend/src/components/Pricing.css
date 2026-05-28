@@ -1,0 +1,348 @@
+.pricing {
+  background: var(--color-white);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-title {
+  font-size: 48px;
+  color: var(--color-terracota);
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.pricing-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.pricing-card {
+  background: var(--color-beige);
+  padding: 40px 30px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 165, 154, 0.3);
+}
+
+.pricing-card.preventa {
+  border-color: var(--color-dorado);
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFF5E6 100%);
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: var(--color-dorado);
+  color: var(--color-white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.pricing-name {
+  font-size: 24px;
+  color: var(--color-text-dark);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.currency {
+  font-size: 24px;
+  color: var(--color-terracota);
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-terracota);
+  font-family: var(--font-heading);
+}
+
+.currency-code {
+  font-size: 18px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.pricing-date {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.pricing-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  border-bottom: 1px solid rgba(212, 165, 154, 0.2);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 16px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.preventa-button {
+  background: var(--color-dorado);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.preventa-button:hover {
+  background: #C19B2E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.final-button {
+  background: var(--color-terracota);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(212, 165, 154, 0.3);
+}
+
+.final-button:hover {
+  background: var(--color-terracota-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 154, 0.4);
+}
+
+/* Información de pago */
+.payment-info {
+  background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 100%);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.payment-security {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.security-icon {
+  font-size: 32px;
+}
+
+.payment-security h4 {
+  font-size: 18px;
+  color: var(--color-text-dark);
+  margin-bottom: 5px;
+  font-family: var(--font-body);
+}
+
+.payment-security p {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.wompi-logo {
+  text-align: center;
+}
+
+.wompi-logo strong {
+  font-size: 20px;
+  color: var(--color-terracota);
+}
+
+.wompi-logo p {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-top: 5px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-icon {
+  font-size: 13px;
+  padding: 8px 15px;
+  background: var(--color-white);
+  border-radius: 8px;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+/* Nota final */
+.pricing-note {
+  background: var(--color-beige);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border-left: 4px solid var(--color-terracota);
+}
+
+.pricing-note p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text-dark);
+  margin-bottom: 15px;
+}
+
+.pricing-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 36px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    padding: 30px 20px;
+  }
+
+  .amount {
+    font-size: 40px;
+  }
+
+  .payment-info {
+    padding: 20px;
+  }
+
+  .payment-icons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .payment-icon {
+    width: 100%;
+  }
+}
+
+/* ── ESTADOS BLOQUEADOS ── */
+
+/* Aviso de formulario requerido */
+.pricing-warning {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #C8705A;
+  font-weight: 500;
+  background: rgba(200,112,90,0.08);
+  padding: 10px 18px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Card con opacidad reducida cuando está bloqueada */
+.card-locked {
+  opacity: 0.75;
+  filter: grayscale(20%);
+}
+
+/* Botón bloqueado (formulario no completado) */
+.locked-button {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #E0D0C8;
+  color: #8B7B73;
+  cursor: pointer;
+  border: 2px dashed #C8B0A8;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+.locked-button:hover {
+  background: #D4C0B8;
+  color: #5A4A42;
+}
+
+/* Bloque de precio final bloqueado por fecha */
+.locked-final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: 25px;
+  background: #F0E8E4;
+  border: 2px dashed #C8B0A8;
+}
+.locked-icon { font-size: 20px; }
+.locked-text {
+  font-size: 13px;
+  color: #8B7B73;
+  line-height: 1.4;
+  font-family: var(--font-body);
+}
+.locked-text strong {
+  color: #C8705A;
+}
