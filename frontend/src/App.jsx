@@ -5,9 +5,9 @@ import InscriptionForm from './components/InscriptionForm'
 import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
+import Admin from './components/Admin'
 import './App.css'
 
-// Página principal
 const Home = () => (
   <>
     <Hero />
@@ -23,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/"        element={<Home />} />
         <Route path="/gracias" element={<ThankYou />} />
+        <Route path="/admin"   element={<Admin />} />
       </Routes>
     </BrowserRouter>
   )

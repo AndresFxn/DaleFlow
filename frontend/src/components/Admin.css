@@ -1,0 +1,99 @@
+.admin-login {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #EDD9C8, #F5EDE4);
+  display: flex; align-items: center; justify-content: center;
+}
+.admin-login-card {
+  background: white; border-radius: 24px; padding: 48px 40px;
+  text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  width: 100%; max-width: 380px;
+}
+.admin-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; color: #C8705A; letter-spacing: 4px; margin-bottom: 8px;
+}
+.admin-login-sub { font-size: 13px; color: #A8897A; margin-bottom: 28px; }
+.admin-input {
+  width: 100%; padding: 12px 16px; border: 2px solid #E8DDD0;
+  border-radius: 12px; font-size: 14px; margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif; outline: none;
+}
+.admin-input:focus { border-color: #C8705A; }
+.admin-error { color: #E57373; font-size: 13px; margin-bottom: 10px; }
+.admin-btn {
+  width: 100%; padding: 13px; background: #C8705A; color: white;
+  border-radius: 25px; font-size: 14px; font-weight: 600;
+  cursor: pointer; border: none; font-family: 'Montserrat', sans-serif;
+  transition: background .2s;
+}
+.admin-btn:hover { background: #B5604A; }
+.admin-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* Page */
+.admin-page {
+  min-height: 100vh; background: #F5EDE4; padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+.admin-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.admin-btn-sm {
+  padding: 8px 20px; background: #C8705A; color: white;
+  border-radius: 20px; font-size: 13px; font-weight: 600;
+  cursor: pointer; border: none;
+}
+
+/* Stats */
+.admin-stats {
+  display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.stat-card {
+  background: white; border-radius: 16px; padding: 20px 24px;
+  text-align: center; flex: 1; min-width: 120px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.stat-green { border-top: 4px solid #81C784; }
+.stat-yellow { border-top: 4px solid #FFD54F; }
+.stat-num { font-size: 36px; font-weight: 700; color: #C8705A; font-family: 'Cormorant Garamond', serif; }
+.stat-label { font-size: 12px; color: #A8897A; margin-top: 4px; }
+
+/* Filters */
+.admin-filters { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 7px 18px; border-radius: 20px; font-size: 13px;
+  border: 2px solid #E8DDD0; background: white; cursor: pointer;
+  font-family: 'Montserrat', sans-serif; transition: all .2s;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: #C8705A; color: white; border-color: #C8705A;
+}
+
+/* Table */
+.admin-table-wrap {
+  background: white; border-radius: 20px; overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+.admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.admin-table th {
+  background: #F5EDE4; padding: 12px 14px; text-align: left;
+  font-weight: 600; color: #5A4A42; white-space: nowrap;
+  border-bottom: 2px solid #E8DDD0;
+}
+.admin-table td {
+  padding: 11px 14px; border-bottom: 1px solid #F5EDE4;
+  color: #3D2B1F; vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.row-pagado { background: #F0FFF0; }
+.td-nombre { font-weight: 600; white-space: nowrap; }
+.admin-table a { color: #C8705A; text-decoration: none; }
+.admin-table a:hover { text-decoration: underline; }
+.empty { text-align: center; padding: 40px; color: #A8897A; }
+
+/* Badges */
+.badge { padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-pagado   { background: #E8F5E9; color: #2E7D32; }
+.badge-pendiente{ background: #FFF8E1; color: #F57F17; }
+.badge-rechazado{ background: #FFEBEE; color: #C62828; }
+.badge-anulado  { background: #F3E5F5; color: #6A1B9A; }
