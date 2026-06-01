@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import muralImg from '../assets/mural.jpeg'
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -11,6 +12,8 @@ const Hero = () => {
 
       {/* ── COL IZQUIERDA: arco iluminado + pedestal + pampas ── */}
       <div className="hero-left">
+        {/* Imagen del mural solo en móvil */}
+        <img src={muralImg} alt="Dale Flow Mural" className="hero-mural-mobile" />
         <div className="hero-arch-wrap">
           {/* Pampas izquierdo */}
           <div className="pampas pampas-l">
