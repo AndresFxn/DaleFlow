@@ -158,3 +158,11 @@
   transition: color .3s;
 }
 .admin-link:hover { color: rgba(245,237,228,0.6); }
+
+.footer-logo-img {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 16px;
+  display: block;
+  opacity: 0.85;
+}

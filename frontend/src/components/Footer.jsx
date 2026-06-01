@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import logoImg from '../assets/logo.png'
 
 const Footer = () => {
   return (
@@ -58,6 +59,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="footer-bottom">
+          <img src={logoImg} alt="Dale Flow Logo" className="footer-logo-img" />
           <p className="footer-copyright">
             © 2026 Dale Flow. Todos los derechos reservados.
           </p>
