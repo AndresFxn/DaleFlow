@@ -20,9 +20,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-title">Conecta con nosotros</h4>
             <div className="footer-links">
-              <a href="https://wa.me/573212846687" target="_blank" rel="noopener noreferrer" className="footer-link">
+              <a href="https://wa.me/573239279990" target="_blank" rel="noopener noreferrer" className="footer-link">
                 <span className="link-icon">📱</span>
-                +57 321 284 6687
+                +57 323 927 9990
               </a>
               <a href="mailto:daleflowexperiencia@gmail.com" className="footer-link">
                 <span className="link-icon">✉️</span>
@@ -41,7 +41,7 @@ const Footer = () => {
               </p>
               <p>
                 <strong>Sábado 20 de junio</strong><br />
-                9:00 a.m. - 12:00 m.
+                5:00 p.m.
               </p>
             </div>
           </div>

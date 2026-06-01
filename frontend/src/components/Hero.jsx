@@ -104,8 +104,7 @@ const Hero = () => {
           <div className="event-pill">
             <span className="event-pill-icon">🕐</span>
             <div>
-              <p className="event-pill-main">Hora</p>
-              <p className="event-pill-sub">pendiente</p>
+              <p className="event-pill-main">5:00 p.m.</p>
             </div>
           </div>
         </div>

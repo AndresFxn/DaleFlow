@@ -62,7 +62,7 @@ const ThankYou = () => {
           <div className="ty-event-item">
             <span className="ty-event-icon">🕐</span>
             <div>
-              <p className="ty-event-label">Hora pendiente</p>
+              <p className="ty-event-label">5:00 p.m.</p>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ const ThankYou = () => {
 
         {/* Contacto */}
         <div className="ty-contact">
-          <a href="https://wa.me/573212846687" target="_blank" rel="noreferrer" className="ty-contact-btn">
+          <a href="https://wa.me/573239279990" target="_blank" rel="noreferrer" className="ty-contact-btn">
             💬 Escríbenos por WhatsApp
           </a>
         </div>
