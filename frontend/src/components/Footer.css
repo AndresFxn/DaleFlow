@@ -148,3 +148,13 @@
     transform: translateX(0);
   }
 }
+
+.admin-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  color: rgba(245,237,228,0.2);
+  text-decoration: none;
+  transition: color .3s;
+}
+.admin-link:hover { color: rgba(245,237,228,0.6); }

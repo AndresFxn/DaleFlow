@@ -64,6 +64,7 @@ const Footer = () => {
           <p className="footer-made">
             Hecho con amor para mujeres que brillan ✨
           </p>
+          <a href="/admin" className="admin-link">⚙</a>
         </div>
       </div>
     </footer>
