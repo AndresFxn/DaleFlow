@@ -358,10 +358,14 @@
 @media (max-width: 700px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: 220px auto auto;
+    grid-template-rows: 240px auto auto;
   }
   .hero-left {
-    height: 220px;
+    height: 240px;
+    background: linear-gradient(180deg, #5C3A1E 0%, #4A2C14 100%);
+  }
+  .arch::before {
+    background: linear-gradient(180deg, #EDD9C8 0%, #E0C9B0 100%);
   }
   .hero-center { padding: 30px 20px; }
   .hero-title { font-size: 40px; }

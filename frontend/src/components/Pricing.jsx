@@ -4,24 +4,29 @@ import './Pricing.css'
 const LINK_PREVENTA = 'https://checkout.wompi.co/l/pcJ317'
 const LINK_FINAL    = 'https://checkout.wompi.co/l/wP7Wda'
 
-// Precio final disponible desde el 13 de junio de 2026 (medianoche Colombia UTC-5)
-const FECHA_PRECIO_FINAL = new Date('2026-06-13T05:00:00.000Z')
+// Precio final disponible desde el 14 de junio (medianoche Colombia UTC-5)
+const FECHA_PRECIO_FINAL = new Date('2026-06-14T05:00:00.000Z')
+
+const INCLUYE = [
+  { icon: '♡', text: 'Flow Experience by Dale Flow' },
+  { icon: '🧘', text: 'Clase guiada de movimiento y energía femenina' },
+  { icon: '🎵', text: 'Música y mezclas exclusivas Dale Flow' },
+  { icon: '🥂', text: 'Bebida especial de bienvenida' },
+  { icon: '🧘', text: 'Meditación guiada — Encuentra tu yo interior' },
+  { icon: '📸', text: 'Photospots y contenido visual' },
+  { icon: '👥', text: 'Espacios de conexión y bienestar' },
+  { icon: '🎁', text: 'Sorpresas durante la experiencia' },
+  { icon: '🌅', text: 'Atardecer + ambiente premium' },
+]
 
 const Pricing = () => {
-  const [inscrito, setInscrito]         = useState(false)
-  const [finalDisponible, setFinal]     = useState(false)
-  const [hoy, setHoy]                   = useState('')
+  const [inscrito, setInscrito]     = useState(false)
+  const [finalDisponible, setFinal] = useState(false)
 
   useEffect(() => {
-    // Verificar si ya completó el formulario
     setInscrito(localStorage.getItem('daleflow_inscrito') === 'true')
+    setFinal(new Date() >= FECHA_PRECIO_FINAL)
 
-    // Verificar fecha para precio final
-    const ahora = new Date()
-    setFinal(ahora >= FECHA_PRECIO_FINAL)
-    setHoy(ahora.toLocaleDateString('es-CO', { day: 'numeric', month: 'long', year: 'numeric' }))
-
-    // Escuchar el evento cuando se completa el formulario en la misma sesión
     const onInscrito = () => setInscrito(true)
     window.addEventListener('daleflow_inscrito', onInscrito)
     return () => window.removeEventListener('daleflow_inscrito', onInscrito)
@@ -54,14 +59,12 @@ const Pricing = () => {
               <span className="amount">69.000</span>
               <span className="currency-code">COP</span>
             </div>
-            <p className="pricing-date">Disponible hasta el 12 de junio</p>
+            <p className="pricing-date">Del 1 al 13 de junio</p>
             <ul className="pricing-features">
-              <li>✓ Acceso a la experiencia Dale Flow</li>
-              <li>✓ Espacio de movimiento y conexión</li>
-              <li>✓ Refrigerio saludable</li>
-              <li>✓ Cupos limitados</li>
+              {INCLUYE.map((item, i) => (
+                <li key={i}><span className="feature-icon">{item.icon}</span> {item.text}</li>
+              ))}
             </ul>
-
             {inscrito ? (
               <a href={LINK_PREVENTA} target="_blank" rel="noreferrer"
                 className="pricing-button preventa-button">
@@ -82,14 +85,12 @@ const Pricing = () => {
               <span className="amount">79.000</span>
               <span className="currency-code">COP</span>
             </div>
-            <p className="pricing-date">Disponible desde el 13 de junio</p>
+            <p className="pricing-date">Del 14 al 20 de junio</p>
             <ul className="pricing-features">
-              <li>✓ Acceso a la experiencia Dale Flow</li>
-              <li>✓ Espacio de movimiento y conexión</li>
-              <li>✓ Refrigerio saludable</li>
-              <li>✓ Cupos limitados</li>
+              {INCLUYE.map((item, i) => (
+                <li key={i}><span className="feature-icon">{item.icon}</span> {item.text}</li>
+              ))}
             </ul>
-
             {!inscrito ? (
               <button className="pricing-button locked-button" onClick={scrollToForm}>
                 🔒 Completa el formulario primero
@@ -97,7 +98,7 @@ const Pricing = () => {
             ) : !finalDisponible ? (
               <div className="locked-final">
                 <span className="locked-icon">🔒</span>
-                <p className="locked-text">Disponible desde el<br/><strong>13 de junio</strong></p>
+                <p className="locked-text">Disponible desde el<br/><strong>14 de junio</strong></p>
               </div>
             ) : (
               <a href={LINK_FINAL} target="_blank" rel="noreferrer"
