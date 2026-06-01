@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './Pricing.css'
 
-const LINK_PREVENTA = 'https://checkout.wompi.co/l/Cqspfy'
-const LINK_FINAL    = 'https://checkout.wompi.co/l/WL5WfR'
+const LINK_PREVENTA = 'https://checkout.wompi.co/l/pcJ317'
+const LINK_FINAL    = 'https://checkout.wompi.co/l/wP7Wda'
 
 // Precio final disponible desde el 13 de junio de 2026 (medianoche Colombia UTC-5)
 const FECHA_PRECIO_FINAL = new Date('2026-06-13T05:00:00.000Z')
